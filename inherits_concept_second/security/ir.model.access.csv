@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+inherits_concept_second.access_car_super,access_car_super,inherits_concept_second.model_car_super,base.group_user,1,1,1,1

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="car_form_view" model="ir.ui.view">
+            <field name="name">Car Details</field>
+            <field name="model">car.car</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name_car"/>
+                            <field name="speed"/>
+                            <field name="price"/>
+                            <field name="cc"/>
+                            <field name="index"/>
+                        </group>
+                        <button type="object" name="increment_button" string="Increment Index" class="oe_highlight"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="car_tree_view" model="ir.ui.view">
+            <field name="name">Car Tree View</field>
+            <field name="model">car.car</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name_car"/>
+                    <field name="speed"/>
+                    <field name="price"/>
+                    <field name="cc"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_car" model="ir.actions.act_window">
+            <field name="name">Car</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">car.car</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="car_menu_root" name="Car"/>
+        <menuitem id="car_dekho_menu" name="Car Dekho" action="action_car" parent="car_menu_root"/>
+    </data>
+</odoo>
